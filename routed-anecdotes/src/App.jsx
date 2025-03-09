@@ -7,9 +7,9 @@ const Menu = () => {
   }
   return (
     <div>
-      <Link style={padding} to="/">anecdotes</Link>
-      <Link style={padding} to="/create">create new</Link>
-      <Link style={padding} to="/about">about</Link>
+      <Link style={padding} to="/">Anecdotes</Link>
+      <Link style={padding} to="/create">Create A New Anecdote</Link>
+      <Link style={padding} to="/about">About</Link>
     </div>
   )
 }
@@ -143,7 +143,7 @@ const App = () => {
     <div>
       <h1>Software anecdotes</h1>
       <Menu />
-      {notification && <div style={{ border: '1px solid green', padding: '5px', marginBottom: '10px' }}>{notification}</div>}
+      {notification && <div style={{ border: '1px solid black', color: 'green', padding: '5px', marginBottom: '10px' }}>{notification}</div>}
       <Routes>
         <Route path="/anecdotes/:id" element={<Anecdote anecdote={anecdote} />} />
         <Route path="/create" element={<CreateNew addNew={addNew} />} />
